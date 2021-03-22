@@ -30,7 +30,7 @@ func TestNew(t *testing.T) {
 		SetAppleApiKey("eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlU4UlRZVjVaRFMifQ.eyJpc3MiOiI3TktaMlZQNDhaIiwiaWF0IjoxNjE2MDA5OTg1LCJleHAiOjE2MTkwMzM5ODV9.imRWFJ8QhkAfSBJFczXw4wlvsJOTuGuD8Go85hGL9gTmPCWUCktSxdtzpOrMIJGCqhvuSvXvR3Bkatfk8UR8nA"),
 	)
 
-	app, err := parser.ParseByBundleID("359917414")
+	app, err := parser.Parse("359917414")
 	if err != nil {
 		t.Fatal(err)
 	}

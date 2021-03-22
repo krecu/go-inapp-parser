@@ -54,11 +54,12 @@ func New(opts ...Option) *Parser {
 	for _, opt := range opts {
 		opt(proto)
 	}
+
 	return proto
 }
 
-// ParseByBundleID - parsing by bundle_id
-func (p *Parser) ParseByBundleID(id string) (*Info, error) {
+// Parse - parsing by bundle_id
+func (p *Parser) Parse(id string) (*Info, error) {
 	if len(strings.Split(id, ".")) > 1 {
 		return ParseGoogle(id, p.setting.Timeout)
 	} else {
